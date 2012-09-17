@@ -1,7 +1,7 @@
 {
-    "name": "noetix/Traction-php",
+    "name": "noetix/traction-php",
     "description": "Traction API Library",
-    "homepage": "https://github.com/noetix/Traction-php",
+    "homepage": "https://github.com/noetix/traction-php",
     "type": "library",
     "license": "MIT",
     "authors": [
