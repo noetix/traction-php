@@ -17,18 +17,18 @@ namespace Traction\Request\Packer\Strategy;
  */
 class Numerical implements StrategyInterface
 {
-	/**
-	 * {@inheritdoc}
-	 */
-	public static function pack(&$data, $field, $contents)
-	{
-		$count = 0;
+    /**
+     * {@inheritdoc}
+     */
+    public static function pack(&$data, $field, $contents)
+    {
+        $count = 0;
 
-		foreach ($contents AS $key => $value)
-		{
-			$count++;
-			
-			$data[$field . $count] = $value;
-		}
-	}
+        foreach ($contents AS $key => $value)
+        {
+            $count++;
+            
+            $data[$field . $count] = $value;
+        }
+    }
 }

@@ -8,11 +8,11 @@ class CustomerTest extends \PHPUnit_Framework_TestCase
 {
     public function testPackable()
     {
-    	$this->assertInstanceOf('Traction\Request\PackableInterface', new Customer);
+        $this->assertInstanceOf('Traction\Request\PackableInterface', new Customer);
     }
 
     public function testNotRequestable()
     {
-    	$this->assertNotInstanceOf('Traction\Request\RequestableInterface', new Customer);
+        $this->assertNotInstanceOf('Traction\Request\RequestableInterface', new Customer);
     }
 }

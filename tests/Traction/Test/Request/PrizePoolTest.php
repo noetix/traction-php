@@ -8,19 +8,19 @@ class PrizePoolTest extends \PHPUnit_Framework_TestCase
 {
     public function testPackable()
     {
-    	$this->assertInstanceOf('Traction\Request\PackableInterface', new PrizePool);
+        $this->assertInstanceOf('Traction\Request\PackableInterface', new PrizePool);
     }
 
     public function testRequestable()
     {
-    	$this->assertInstanceOf('Traction\Request\RequestableInterface', new PrizePool);
+        $this->assertInstanceOf('Traction\Request\RequestableInterface', new PrizePool);
     }
 
     public function testValidPath()
     {
-    	$obj = new PrizePool;
+        $obj = new PrizePool;
 
-    	$this->assertTrue(is_string($obj->getPath()));
-    	$this->assertStringStartsWith('/', $obj->getPath());
+        $this->assertTrue(is_string($obj->getPath()));
+        $this->assertStringStartsWith('/', $obj->getPath());
     }
 }

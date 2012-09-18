@@ -13,15 +13,15 @@ class ResponseTest extends \PHPUnit_Framework_TestCase
      */
     public function transportErrorProvider()
     {
-    	$response = new TransportResponse;
+        $response = new TransportResponse;
         $response->setHeaders(array(
-			"HTTP/1.1 404 OK",
-			"Date: Thu, 13 Sep 2012 01:54:17 GMT",
-			"Transfer-Encoding: chunked",
-			"Content-Type: text/plain; charset=UTF-8"
-		));
+            "HTTP/1.1 404 OK",
+            "Date: Thu, 13 Sep 2012 01:54:17 GMT",
+            "Transfer-Encoding: chunked",
+            "Content-Type: text/plain; charset=UTF-8"
+        ));
 
-    	return array(array($response));
+        return array(array($response));
     }
     
     /**
@@ -38,18 +38,18 @@ class ResponseTest extends \PHPUnit_Framework_TestCase
      */
     public function validResultProvider()
     {
-    	$response = new TransportResponse;
+        $response = new TransportResponse;
         $response->setHeaders(array(
-			"HTTP/1.1 200 OK",
-			"Date: Thu, 13 Sep 2012 01:54:17 GMT",
-			"Server: TractionPlatform",
-			"TRAC-RESULT: 0",
-			"TRAC-CUSTOMERID: 123456",
-			"Transfer-Encoding: chunked",
-			"Content-Type: text/plain; charset=UTF-8"
-		));
+            "HTTP/1.1 200 OK",
+            "Date: Thu, 13 Sep 2012 01:54:17 GMT",
+            "Server: TractionPlatform",
+            "TRAC-RESULT: 0",
+            "TRAC-CUSTOMERID: 123456",
+            "Transfer-Encoding: chunked",
+            "Content-Type: text/plain; charset=UTF-8"
+        ));
 
-    	return array(array($response));
+        return array(array($response));
     }
 
     /**
@@ -67,19 +67,19 @@ class ResponseTest extends \PHPUnit_Framework_TestCase
      */
     public function validResultWithWarningsProvider()
     {
-    	$response = new TransportResponse;
+        $response = new TransportResponse;
         $response->setHeaders(array(
-			"HTTP/1.1 200 OK",
-			"Date: Thu, 13 Sep 2012 01:54:17 GMT",
-			"Server: TractionPlatform",
-			"TRAC-RESULT: -8",
-			"TRAC-ERRORCODES: -8",
-			"TRAC-ERRORPARAMS: ",
-			"Transfer-Encoding: chunked",
-			"Content-Type: text/plain; charset=UTF-8"
-		));
+            "HTTP/1.1 200 OK",
+            "Date: Thu, 13 Sep 2012 01:54:17 GMT",
+            "Server: TractionPlatform",
+            "TRAC-RESULT: -8",
+            "TRAC-ERRORCODES: -8",
+            "TRAC-ERRORPARAMS: ",
+            "Transfer-Encoding: chunked",
+            "Content-Type: text/plain; charset=UTF-8"
+        ));
 
-    	return array(array($response));
+        return array(array($response));
     }
 
     /**
@@ -98,18 +98,18 @@ class ResponseTest extends \PHPUnit_Framework_TestCase
      */
     public function invalidResultProvider()
     {
-    	$response = new TransportResponse;
+        $response = new TransportResponse;
         $response->setHeaders(array(
-			"HTTP/1.1 200 OK",
-			"Date: Thu, 13 Sep 2012 01:54:17 GMT",
-			"Server: TractionPlatform",
-			"TRAC-RESULT: 1",
-			"TRAC-ERROR: Incorrect Login credentials",
-			"Transfer-Encoding: chunked",
-			"Content-Type: text/plain; charset=UTF-8"
-		));
+            "HTTP/1.1 200 OK",
+            "Date: Thu, 13 Sep 2012 01:54:17 GMT",
+            "Server: TractionPlatform",
+            "TRAC-RESULT: 1",
+            "TRAC-ERROR: Incorrect Login credentials",
+            "Transfer-Encoding: chunked",
+            "Content-Type: text/plain; charset=UTF-8"
+        ));
 
-    	return array(array($response));
+        return array(array($response));
     }
 
     /**

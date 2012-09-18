@@ -12,15 +12,15 @@ use Traction\Exceptions\TransportException;
  */
 class Response
 {
-	protected $response;
+    protected $response;
 
-	public function __construct (TransportResponse $response)
-	{
-		if (!$response->isSuccessful())
-			throw new TransportException($response);
+    public function __construct (TransportResponse $response)
+    {
+        if (!$response->isSuccessful())
+            throw new TransportException($response);
 
-		$this->response = $response;
-	}
+        $this->response = $response;
+    }
 
     /**
      * Get transport response object
@@ -29,7 +29,7 @@ class Response
      */
     public function getTransportResponse()
     {
-    	return $this->response;
+        return $this->response;
     }
 
     /**
@@ -39,7 +39,7 @@ class Response
      */
     public function isSuccessful()
     {
-    	return $this->response->getHeader('TRAC-RESULT') <= 0;
+        return $this->response->getHeader('TRAC-RESULT') <= 0;
     }
 
     /**
@@ -49,7 +49,7 @@ class Response
      */
     public function getError()
     {
-    	return $this->response->getHeader('TRAC-ERROR') ?: null;
+        return $this->response->getHeader('TRAC-ERROR') ?: null;
     }
 
     /**
@@ -59,7 +59,7 @@ class Response
      */
     public function getCustomerId()
     {
-    	return $this->response->getHeader('TRAC-CUSTOMERID') ?: null;
+        return $this->response->getHeader('TRAC-CUSTOMERID') ?: null;
     }
 
     /**
@@ -69,7 +69,7 @@ class Response
      */
     public function getAttribute()
     {
-    	return $this->response->getHeader('TRAC-ATTR') ?: null;
+        return $this->response->getHeader('TRAC-ATTR') ?: null;
     }
 
     /**
@@ -79,7 +79,7 @@ class Response
      */
     public function getErrorCodes()
     {
-    	return $this->response->getHeader('TRAC-ERRORCODES') ?: null;
+        return $this->response->getHeader('TRAC-ERRORCODES') ?: null;
     }
 
     /**
@@ -89,6 +89,6 @@ class Response
      */
     public function getErrorParams()
     {
-    	return $this->response->getHeader('TRAC-ERRORPARAMS') ?: null;
+        return $this->response->getHeader('TRAC-ERRORPARAMS') ?: null;
     }
 }

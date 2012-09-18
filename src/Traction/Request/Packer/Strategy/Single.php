@@ -15,11 +15,11 @@ namespace Traction\Request\Packer\Strategy;
  */
 class Single implements StrategyInterface
 {
-	/**
-	 * {@inheritdoc}
-	 */
-	public static function pack(&$data, $field, $contents)
-	{
-		$data[$field] = $contents;
-	}
+    /**
+     * {@inheritdoc}
+     */
+    public static function pack(&$data, $field, $contents)
+    {
+        $data[$field] = $contents;
+    }
 }

@@ -8,19 +8,19 @@ class SmsGatewayTest extends \PHPUnit_Framework_TestCase
 {
     public function testPackable()
     {
-    	$this->assertInstanceOf('Traction\Request\PackableInterface', new SmsGateway);
+        $this->assertInstanceOf('Traction\Request\PackableInterface', new SmsGateway);
     }
 
     public function testRequestable()
     {
-    	$this->assertInstanceOf('Traction\Request\RequestableInterface', new SmsGateway);
+        $this->assertInstanceOf('Traction\Request\RequestableInterface', new SmsGateway);
     }
 
     public function testValidPath()
     {
-    	$obj = new SmsGateway;
+        $obj = new SmsGateway;
 
-    	$this->assertTrue(is_string($obj->getPath()));
-    	$this->assertStringStartsWith('/', $obj->getPath());
+        $this->assertTrue(is_string($obj->getPath()));
+        $this->assertStringStartsWith('/', $obj->getPath());
     }
 }

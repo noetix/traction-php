@@ -19,14 +19,14 @@ namespace Traction\Request\Packer\Strategy;
  */
 class Merge implements StrategyInterface
 {
-	/**
-	 * {@inheritdoc}
-	 */
-	public static function pack(&$data, $field, $contents)
-	{
-		foreach ($contents AS $key => $value)
-		{
-			$data[$key] = $value;
-		}
-	}
+    /**
+     * {@inheritdoc}
+     */
+    public static function pack(&$data, $field, $contents)
+    {
+        foreach ($contents AS $key => $value)
+        {
+            $data[$key] = $value;
+        }
+    }
 }

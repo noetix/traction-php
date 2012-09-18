@@ -8,15 +8,15 @@ class CompressTest extends \PHPUnit_Framework_TestCase
 {
     public function testValidInterface()
     {
-    	$this->assertInstanceOf('Traction\Request\Packer\Strategy\StrategyInterface', new Compress);
+        $this->assertInstanceOf('Traction\Request\Packer\Strategy\StrategyInterface', new Compress);
     }
 
     public function testPack()
     {
-    	$data = array();
+        $data = array();
         $contents = array('LIKE' => 'orange', 'LOVE' => 'apple', 'HATE' => 'banana');
-    	
-    	Compress::pack($data, 'FRUIT', $contents);
+        
+        Compress::pack($data, 'FRUIT', $contents);
 
         $this->assertArrayHasKey('FRUIT', $data);
 

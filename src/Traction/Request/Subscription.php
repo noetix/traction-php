@@ -12,149 +12,149 @@ use Traction\Request\Type\Customer;
  */
 class Subscription extends BaseAbstract
 {
-	/**
-	 * Subscribe options
-	 */
-	const
-		SUBSCRIBE   = 'S',
-		UNSUBSCRIBE = 'U';
+    /**
+     * Subscribe options
+     */
+    const
+        SUBSCRIBE   = 'S',
+        UNSUBSCRIBE = 'U';
 
-	/**
-	 * Field definition
-	 */
-	public
-		$SUBSCRIPTIONID,
-		$SUBORUNSUB,
-		$SENDREPLYSMS,
-		$MATCHKEY,
-		$MATCHVALUE,
-		$CUSTOMER;
+    /**
+     * Field definition
+     */
+    public
+        $SUBSCRIPTIONID,
+        $SUBORUNSUB,
+        $SENDREPLYSMS,
+        $MATCHKEY,
+        $MATCHVALUE,
+        $CUSTOMER;
 
     /**
      * {@inheritdoc}
      */
     public function getPath()
     {
-    	return '/ext/Subscribe';
+        return '/ext/Subscribe';
     }
 
-	/**
-	 * Set subscription id
-	 * 
-	 * @param integer $value
-	 */
-	public function setSubscriptionId($value)
-	{
-		$this->SUBSCRIPTIONID = (int) $value;
-	}
+    /**
+     * Set subscription id
+     * 
+     * @param integer $value
+     */
+    public function setSubscriptionId($value)
+    {
+        $this->SUBSCRIPTIONID = (int) $value;
+    }
 
-	/**
-	 * Get subscription id
-	 * 
-	 * @return integer
-	 */
-	public function getSubscriptionId()
-	{
-		return $this->SUBSCRIPTIONID;
-	}
+    /**
+     * Get subscription id
+     * 
+     * @return integer
+     */
+    public function getSubscriptionId()
+    {
+        return $this->SUBSCRIPTIONID;
+    }
 
-	/**
-	 * Set sub or unsub
-	 * 
-	 * @param string $value
-	 */
-	public function setSubOrUnsub($value = null)
-	{
-		$this->SUBORUNSUB = $value;
-	}
+    /**
+     * Set sub or unsub
+     * 
+     * @param string $value
+     */
+    public function setSubOrUnsub($value = null)
+    {
+        $this->SUBORUNSUB = $value;
+    }
 
-	/**
-	 * Get sub or unsub
-	 * 
-	 * @return string
-	 */
-	public function getSubOrUnsub()
-	{
-		return $this->SUBORUNSUB;
-	}
+    /**
+     * Get sub or unsub
+     * 
+     * @return string
+     */
+    public function getSubOrUnsub()
+    {
+        return $this->SUBORUNSUB;
+    }
 
-	/**
-	 * Set send reply sms
-	 * 
-	 * @param string $value
-	 */
-	public function setSendReplySms($value = null)
-	{
-		$this->SENDREPLYSMS = $value;
-	}
+    /**
+     * Set send reply sms
+     * 
+     * @param string $value
+     */
+    public function setSendReplySms($value = null)
+    {
+        $this->SENDREPLYSMS = $value;
+    }
 
-	/**
-	 * Get send reply sms
-	 * 
-	 * @return string
-	 */
-	public function getSendReplySms()
-	{
-		return $this->SENDREPLYSMS;
-	}
+    /**
+     * Get send reply sms
+     * 
+     * @return string
+     */
+    public function getSendReplySms()
+    {
+        return $this->SENDREPLYSMS;
+    }
 
-	/**
-	 * Set match key
-	 * 
-	 * @param string $value
-	 */
-	public function setMatchKey($value)
-	{
-		$this->MATCHKEY = $value;
-	}
+    /**
+     * Set match key
+     * 
+     * @param string $value
+     */
+    public function setMatchKey($value)
+    {
+        $this->MATCHKEY = $value;
+    }
 
-	/**
-	 * Get match key
-	 * 
-	 * @return string
-	 */
-	public function getMatchKey()
-	{
-		return $this->MATCHKEY;
-	}
+    /**
+     * Get match key
+     * 
+     * @return string
+     */
+    public function getMatchKey()
+    {
+        return $this->MATCHKEY;
+    }
 
-	/**
-	 * Set match value
-	 * 
-	 * @param string $value
-	 */
-	public function setMatchValue($value)
-	{
-		$this->MATCHVALUE = $value;
-	}
+    /**
+     * Set match value
+     * 
+     * @param string $value
+     */
+    public function setMatchValue($value)
+    {
+        $this->MATCHVALUE = $value;
+    }
 
-	/**
-	 * Get match value
-	 * 
-	 * @return string
-	 */
-	public function getMatchValue()
-	{
-		return $this->MATCHVALUE;
-	}
+    /**
+     * Get match value
+     * 
+     * @return string
+     */
+    public function getMatchValue()
+    {
+        return $this->MATCHVALUE;
+    }
 
-	/**
-	 * Set customer
-	 * 
-	 * @param Customer $value
-	 */
-	public function setCustomer(Customer $value = null)
-	{
-		$this->CUSTOMER = $value;
-	}
+    /**
+     * Set customer
+     * 
+     * @param Customer $value
+     */
+    public function setCustomer(Customer $value = null)
+    {
+        $this->CUSTOMER = $value;
+    }
 
-	/**
-	 * Get customer
-	 * 
-	 * @return Customer
-	 */
-	public function getCustomer()
-	{
-		return $this->CUSTOMER;
-	}
+    /**
+     * Get customer
+     * 
+     * @return Customer
+     */
+    public function getCustomer()
+    {
+        return $this->CUSTOMER;
+    }
 }

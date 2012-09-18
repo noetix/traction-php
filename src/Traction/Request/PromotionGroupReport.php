@@ -9,37 +9,37 @@ namespace Traction\Request;
  */
 class PromotionGroupReport extends BaseAbstract
 {
-	/**
-	 * Field definition
-	 */
-	public
-		$GROUPID;
+    /**
+     * Field definition
+     */
+    public
+        $GROUPID;
 
     /**
      * {@inheritdoc}
      */
     public function getPath()
     {
-    	return '/ext/PromotionGroupReport';
+        return '/ext/PromotionGroupReport';
     }
 
-	/**
-	 * Set group ID
-	 * 
-	 * @param integer $value
-	 */
-	public function setGroupId($value)
-	{
-		$this->GROUPID = (int) $value;
-	}
+    /**
+     * Set group ID
+     * 
+     * @param integer $value
+     */
+    public function setGroupId($value)
+    {
+        $this->GROUPID = (int) $value;
+    }
 
-	/**
-	 * Get group ID
-	 * 
-	 * @return integer
-	 */
-	public function getGroupId()
-	{
-		return $this->GROUPID;
-	}
+    /**
+     * Get group ID
+     * 
+     * @return integer
+     */
+    public function getGroupId()
+    {
+        return $this->GROUPID;
+    }
 }

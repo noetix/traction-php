@@ -8,19 +8,19 @@ class MultiSubscriptionTest extends \PHPUnit_Framework_TestCase
 {
     public function testPackable()
     {
-    	$this->assertInstanceOf('Traction\Request\PackableInterface', new MultiSubscription);
+        $this->assertInstanceOf('Traction\Request\PackableInterface', new MultiSubscription);
     }
 
     public function testRequestable()
     {
-    	$this->assertInstanceOf('Traction\Request\RequestableInterface', new MultiSubscription);
+        $this->assertInstanceOf('Traction\Request\RequestableInterface', new MultiSubscription);
     }
 
     public function testValidPath()
     {
-    	$obj = new MultiSubscription;
+        $obj = new MultiSubscription;
 
-    	$this->assertTrue(is_string($obj->getPath()));
-    	$this->assertStringStartsWith('/', $obj->getPath());
+        $this->assertTrue(is_string($obj->getPath()));
+        $this->assertStringStartsWith('/', $obj->getPath());
     }
 }

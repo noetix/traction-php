@@ -17,18 +17,18 @@ namespace Traction\Request\Packer\Strategy;
  */
 class Compress implements StrategyInterface
 {
-	/**
-	 * {@inheritdoc}
-	 */
-	public static function pack(&$data, $field, $contents)
-	{
-		$segments = array();
+    /**
+     * {@inheritdoc}
+     */
+    public static function pack(&$data, $field, $contents)
+    {
+        $segments = array();
 
-		foreach ($contents AS $key => $value)
-		{
-			$segments[] = sprintf('%s|%s', $key, $value);
-		}
+        foreach ($contents AS $key => $value)
+        {
+            $segments[] = sprintf('%s|%s', $key, $value);
+        }
 
-		$data[$field] = implode(chr(31), $segments);
-	}
+        $data[$field] = implode(chr(31), $segments);
+    }
 }
