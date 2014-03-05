@@ -9,7 +9,7 @@ use Traction\Request\Packer\Packer;
 /**
  * Base structure for an API request object.
  *
- * @author Alex Joyce <im@alex-joyce.com>
+ * @author Craig Morris <craig.michael.morris@gmail.com>
  */
 abstract class DynamicBaseAbstract extends BaseAbstract
 {

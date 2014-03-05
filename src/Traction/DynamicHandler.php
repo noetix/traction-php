@@ -14,7 +14,7 @@ use Traction\Response;
 /**
  * Request & Response Handler.
  *
- * @author Alex Joyce <im@alex-joyce.com>
+ * @author Craig Morris <craig.michael.morris@gmail.com>
  */
 class DynamicHandler extends Handler
 {

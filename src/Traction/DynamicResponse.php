@@ -8,7 +8,7 @@ use Traction\Exceptions\TransportException;
 /**
  * Response wrapper.
  *
- * @author Alex Joyce <im@alex-joyce.com>
+ * @author Craig Morris <craig.michael.morris@gmail.com>
  */
 class DynamicResponse extends Response
 {

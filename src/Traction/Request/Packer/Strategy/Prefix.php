@@ -9,13 +9,13 @@ namespace Traction\Request\Packer\Strategy;
  *   FRUIT = ['LIKE' => 'orange', 'LOVE' => 'apple', 'HATE' => 'banana']
  *
  * Example Output:
- *   LIKE = orange
- *   LOVE = apple
- *   HATE = banana
+ *   FRUIT.LIKE = orange
+ *   FRUIT.LOVE = apple
+ *   FRUIT.HATE = banana
  *
  * Note: Merging is done manually to allow for numerical keys.
  *
- * @author Alex Joyce <im@alex-joyce.com>
+ * @author Craig Morris <craig.michael.morris@gmail.com>
  */
 class Prefix implements StrategyInterface
 {

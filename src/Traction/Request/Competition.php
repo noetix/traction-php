@@ -9,7 +9,7 @@ use Traction\Request\Type\Customer;
 /**
  * Promotion API request structure.
  *
- * @author Alex Joyce <im@alex-joyce.com>
+ * @author Craig Morris <craig.michael.morris@gmail.com>
  */
 class Competition extends DynamicBaseAbstract
 {

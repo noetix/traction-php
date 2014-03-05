@@ -11,7 +11,7 @@ use Traction\Request\Packer\Strategy\Compress;
  * Converts a packable object, typically a plain-old PHP object
  * and amalgamates it into an array of parameters for a CURL request.
  *
- * @author Alex Joyce <im@alex-joyce.com>
+ * @author Craig Morris <craig.michael.morris@gmail.com>
  */
 class DynamicPacker extends Packer
 {
