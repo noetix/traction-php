@@ -9,7 +9,12 @@
             "name": "Alex Joyce",
             "email": "im@alex-joyce.com",
             "homepage": "http://alex-joyce.com/"
-        }
+        },
+	    {
+		    "name": "Craig Morris",
+		    "email": "craig.michael.morris@gmail.com",
+		    "homepage": "http://waww.com.au/"
+	    }
     ],
     "require": {
         "php": ">=5.3.0",
