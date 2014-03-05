@@ -15,10 +15,10 @@ use Traction\Request\Packer\Strategy\Compress;
  */
 class DynamicPacker extends Packer
 {
-	/**
-	 * Default strategies.
-	 */
-	const
-		PREFIX_KEY_STRATEGY    = 'Traction\Request\Packer\Strategy\Prefix';
+    /**
+     * Default strategies.
+     */
+    const
+        PREFIX_KEY_STRATEGY = 'Traction\Request\Packer\Strategy\Prefix';
 
 }

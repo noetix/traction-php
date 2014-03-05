@@ -13,11 +13,11 @@ use Traction\Request\Packer\Packer;
  */
 abstract class DynamicBaseAbstract extends BaseAbstract
 {
-	/**
-	 * {@inheritdoc}
-	 */
-	public function getPath()
-	{
-		throw new Exception('getPath() should not be called for the dynamic API');
-	}
+    /**
+     * {@inheritdoc}
+     */
+    public function getPath()
+    {
+        throw new Exception('getPath() should not be called for the dynamic API');
+    }
 }

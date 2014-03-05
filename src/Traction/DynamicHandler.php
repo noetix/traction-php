@@ -20,7 +20,7 @@ class DynamicHandler extends Handler
 {
     /**
      * Set our default options.
-     * 
+     *
      * @param OptionsResolverInterface $resolver
      */
     protected function setDefaultOptions(OptionsResolverInterface $resolver)
@@ -34,14 +34,14 @@ class DynamicHandler extends Handler
                 'password',
             ))
             ->setAllowedTypes(array(
-                'connection'  => 'string',
-                'password'    => 'string',
+                'connection' => 'string',
+                'password' => 'string',
             ));
     }
 
     /**
      * Submit a request to the API.
-     * 
+     *
      * @param Requestable $request
      * @return object
      */
@@ -63,7 +63,9 @@ class DynamicHandler extends Handler
     private function applyDefaultOptions(RequestableInterface $request)
     {
         // set custom password
-        if (isset($this->options['password']))
+        if ( isset($this->options['password']) )
+        {
             $request->setPassword($this->options['password']);
+        }
     }
 }

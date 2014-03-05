@@ -17,7 +17,7 @@ class Competition extends DynamicBaseAbstract
      * Packer configuration
      */
     const
-        CUSTOMER_PACKER_STRATEGY  = DynamicPacker::PREFIX_KEY_STRATEGY;
+        CUSTOMER_PACKER_STRATEGY = DynamicPacker::PREFIX_KEY_STRATEGY;
 
     /**
      * Field definition
@@ -34,43 +34,45 @@ class Competition extends DynamicBaseAbstract
         throw new Exception('getPath() should not be called for the dynamic API');
     }
 
-	/**
-	 * Set subsribe
-	 *
-	 * @param boolean $subscribe
-	 */
-	public function setSubscribe($subscribe) {
-		$this->SUBSCRIBE = $subscribe;
-	}
+    /**
+     * Set subsribe
+     *
+     * @param boolean $subscribe
+     */
+    public function setSubscribe($subscribe)
+    {
+        $this->SUBSCRIBE = $subscribe;
+    }
 
-	/**
-	 * Get subscribe
-	 *
-	 * @return Boolean
-	 */
-	public function getSubscribe() {
-		return $this->SUBSCRIBE;
-	}
+    /**
+     * Get subscribe
+     *
+     * @return Boolean
+     */
+    public function getSubscribe()
+    {
+        return $this->SUBSCRIBE;
+    }
 
-	/**
-	 * Add a custom attribute
-	 *
-	 * @param string  $key   ID of custom attribute in Traction
-	 * @param mixed   $value
-	 */
-	public function addAttribute($key, $value = null)
-	{
-		$this->CUSTOMER[$key] = $value;
-	}
+    /**
+     * Add a custom attribute
+     *
+     * @param string $key ID of custom attribute in Traction
+     * @param mixed $value
+     */
+    public function addAttribute($key, $value = NULL)
+    {
+        $this->CUSTOMER[$key] = $value;
+    }
 
-	/**
-	 * Get custom attributes
-	 *
-	 * @return array
-	 */
-	public function getAttributes()
-	{
-		return $this->CUSTOMER;
-	}
+    /**
+     * Get custom attributes
+     *
+     * @return array
+     */
+    public function getAttributes()
+    {
+        return $this->CUSTOMER;
+    }
 
 }

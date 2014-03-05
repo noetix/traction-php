@@ -19,14 +19,14 @@ namespace Traction\Request\Packer\Strategy;
  */
 class Prefix implements StrategyInterface
 {
-	/**
-	 * {@inheritdoc}
-	 */
-	public static function pack(&$data, $prefix, $contents)
-	{
-		foreach ($contents AS $key => $value)
-		{
-			$data[$prefix . '.' . $key] = $value;
-		}
-	}
+    /**
+     * {@inheritdoc}
+     */
+    public static function pack(&$data, $prefix, $contents)
+    {
+        foreach ($contents AS $key => $value)
+        {
+            $data[$prefix . '.' . $key] = $value;
+        }
+    }
 }

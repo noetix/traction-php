@@ -11,7 +11,7 @@ This is a PHP implementation of their API.
 
 ## Classic API
 
-```
+```php
 <?php
 
 use Traction\Request\Type\Customer;
@@ -48,7 +48,7 @@ $response = $handler->submit($promo);
 
 ## Dynamic API
 
-```
+```php
 use Traction\Request\Competition;
 use Traction\DynamicHandler;
 

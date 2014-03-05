@@ -10,11 +10,11 @@
             "email": "im@alex-joyce.com",
             "homepage": "http://alex-joyce.com/"
         },
-	    {
-		    "name": "Craig Morris",
-		    "email": "craig.michael.morris@gmail.com",
-		    "homepage": "http://waww.com.au/"
-	    }
+        {
+            "name": "Craig Morris",
+            "email": "craig.michael.morris@gmail.com",
+            "homepage": "http://waww.com.au/"
+        }
     ],
     "require": {
         "php": ">=5.3.0",
@@ -22,6 +22,8 @@
         "symfony/options-resolver": "*"
     },
     "autoload": {
-        "psr-0": { "Traction": "src/" }
+        "psr-0": {
+            "Traction": "src/"
+        }
     }
 }
