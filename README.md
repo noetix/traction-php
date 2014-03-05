@@ -9,6 +9,8 @@ This is a PHP implementation of their API.
 
 # Example
 
+## Classic API
+
 ```php
 <?php
 
@@ -42,6 +44,36 @@ $handler = new Handler(array(
 
 // send it
 $response = $handler->submit($promo);
+```
+
+## Dynamic API
+
+```php
+use Traction\Request\Competition;
+use Traction\DynamicHandler;
+
+// Create Entry
+$comp = new Competition();
+$comp->addAttribute('EMAIL', $entry->getEmail());
+$comp->addAttribute('FIRSTNAME', $entry->getFirstName());
+$comp->addAttribute('LASTNAME', $entry->getSurname());
+$comp->addAttribute('LNDM_DATE_OF_BIRTH', $entry->getDob()->format('d/m/Y'));
+$comp->addAttribute('LNDM_PHONE_NUMBER', $entry->getMobile());
+$comp->addAttribute('LNDM_ADDRESS_1', $entry->getStreet());
+$comp->addAttribute('LNDM_STATE_NAME', $entry->getState());
+$comp->addAttribute('LNDM_SUBURB', $entry->getSuburb());
+$comp->addAttribute('LNDM_POSTCODE', $entry->getPostcode());
+$comp->setSubscribe($entry->getOptin());
+
+// create an instance of the request handler
+$handler = new DynamicHandler(array(
+    'connection' => 'd2342afexxxadfas23r',
+    'password'    => 'bar'
+));
+
+// send it
+$response = $traction->submit($comp);
+return $response->getCustomerId();
 ```
 
 [1]: http://traction-digital.com
