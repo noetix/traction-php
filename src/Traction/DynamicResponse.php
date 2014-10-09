@@ -19,6 +19,14 @@ class DynamicResponse extends Response
         parent::__construct($response);
         $this->data = json_decode($response->getContent());
     }
+    
+    /**
+     * get raw data array
+     * @return Array
+     */
+    public function getData() {
+        return $this->data;
+    }
 
     /**
      * {@inheritdoc}
@@ -41,7 +49,7 @@ class DynamicResponse extends Response
      */
     public function getCustomerId()
     {
-        return !empty($this->data->data) ? $this->data->data->customer_id : NULL;
+        return !empty($this->data->data) && !empty($this->data->data->customer_id) ? $this->data->data->customer_id : NULL;
     }
 
     /**
