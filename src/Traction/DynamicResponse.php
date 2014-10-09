@@ -22,10 +22,19 @@ class DynamicResponse extends Response
     
     /**
      * get raw data array
-     * @return Array
+     * @param $attribute String attribute name
+     * 
+     * @return Mixed
      */
-    public function getData() {
-        return $this->data;
+    public function getData($attribute=null) {
+	    if(isset($this->data)) {
+		    if($attribute === null) {
+			    return $this->data;
+		    } else if(isset($this->data->$attribute)) {
+			    return $this->data->$attribute;
+		    }
+	    }
+	    return null;
     }
 
     /**
